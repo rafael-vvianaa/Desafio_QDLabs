@@ -2,8 +2,10 @@ const express = require('express'); // importação do express
 
 const app = express();// instanciando o expression
 
-app.get('/', (request, response)=> {
-    return res.send("ola");
-});
+app.use(express.json());//utilizar requisiçoes com json no express
+app.use(express.urlencoded({ extended: true}));
+//app.use(morgan('dev'));
 
-app.listen(3000); //porta usada 
+app.use(require("./rotas"));// uso do arquivo rota criado
+
+app.listen(3333); //porta usada 
