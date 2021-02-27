@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 const app = express();// instanciando o expression
 
-mongoose.connect('mongodb://localhost:27017/imagens', { 
+mongoose.connect(process.env.URL_MONODB, { 
     useNewUrlParser:true, useUnifiedTopology: true });
 
 app.use(express.json());//utilizar requisiçoes com json no express
