@@ -6,7 +6,7 @@ const ImgSchema = new mongoose.Schema({
     tamanho: Number,
     key: String, 
     url: String,
-    createdAt: {
+    createDate: {
         type: Date,
         default: Date.now(),
     },
